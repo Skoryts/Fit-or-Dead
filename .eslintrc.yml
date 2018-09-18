@@ -1,0 +1,66 @@
+env:
+  es6: true
+  node: true
+
+extends:
+  - eslint:recommended
+  - airbnb
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 2018
+  sourceType: module
+plugins:
+  - react
+rules:
+  indent:
+    - error
+    - 2
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+  block-scoped-var:
+    - error
+  consistent-return:
+    - error
+  curly:
+    - error
+  default-case:
+    - error
+  dot-location:
+    - error
+    - property
+  eqeqeq:
+    - error
+  max-classes-per-file:
+    - error
+  no-eval:
+    - error
+  no-magic-numbers:
+    - error
+    - enforceConst: true
+  no-multi-spaces:
+    - error
+  no-new:
+    - error
+  no-new-wrappers:
+    - error
+  no-sequences:
+    - error
+  init-declarations:
+    - error
+  no-use-before-define:
+    - error
+  comma-dangle:
+    - error
+  comma-spacing:
+    - error
+  func-call-spacing:
+    - error

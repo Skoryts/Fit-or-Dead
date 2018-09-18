@@ -1,0 +1,35 @@
+{
+  "name": "fit-or-dead",
+  "version": "1.0.0",
+  "description": "The goal of the project is to give a bunch of functionalities for effective trainings in a gym. The user can find a lot of exercises and complex training programs. Also, users can add own exercises and make custom programs, share them, compare results with other users.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skoryts/Fit-or-Dead.git"
+  },
+  "keywords": [
+    "fit",
+    "health",
+    "gym"
+  ],
+  "author": "Skoryts",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/Skoryts/Fit-or-Dead/issues"
+  },
+  "homepage": "https://github.com/Skoryts/Fit-or-Dead#readme",
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "ts-loader": "^5.1.1",
+    "typescript": "^3.0.3",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
