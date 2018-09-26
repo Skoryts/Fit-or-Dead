@@ -1,9 +1,13 @@
+const config = require('./config');
 const express = require('express');
 const app = express();
-const port = 3000;
 
-require('./db');
+const db = require('./db');
 
-app.get('/health', (req, res) => res.send('Health check'));
+app.get('/health', (req, res) => {
+  db.query('SELECT NOW()')
+    .then(result => res.send(`Health check. Time: ${result.rows[0].now}`))
+    .catch(e => res.send(`Health check. Something is wrong. ${e}`));
+});
 
-app.listen(port, () => console.log(`API listening on port ${port}`));
+app.listen(config.port, () => console.log(`API listening on port ${config.port}`));

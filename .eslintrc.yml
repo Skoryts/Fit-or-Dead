@@ -4,7 +4,6 @@ env:
 
 extends:
   - eslint:recommended
-  - airbnb
 
 parserOptions:
   ecmaFeatures:
@@ -16,9 +15,6 @@ rules:
   indent:
     - error
     - 2
-  linebreak-style:
-    - error
-    - unix
   quotes:
     - error
     - single
