@@ -1,8 +1,8 @@
-require('dotenv').config({path: '../.env'});
+require('dotenv').config({ path: '../.env', silent: true });
 
 const config = {
   port: process.env.PORT,
-  db: process.env.DB_CONNECTION
+  db_uri: process.env.DB_URI
 };
 
 module.exports = config;

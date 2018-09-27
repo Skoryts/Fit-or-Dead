@@ -1,8 +1,8 @@
 
-exports.up = function(knex, Promise) {
+exports.up = (knex, Promise) => {
   return knex.schema.createTable('users', t => {
-    t.increments('id').unsigned().primary();
-    t.dateTime('createdAt').notNull();
+    t.uuid('id').unique().primary();
+    t.dateTime('createdAt').notNull().defaultTo(knex.fn.now());
     t.dateTime('updatedAt').nullable();
     t.dateTime('deletedAt').nullable();
     t.string('email').notNull();
@@ -10,6 +10,6 @@ exports.up = function(knex, Promise) {
   });
 };
 
-exports.down = function(knex, Promise) {
+exports.down = (knex, Promise) => {
   return knex.schema.dropTable('users');
 };

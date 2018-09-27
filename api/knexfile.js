@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: config.db,
+    connection: config.db_uri,
     pool: {
       min: 2,
       max: 10
