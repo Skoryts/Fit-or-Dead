@@ -6,7 +6,7 @@ const app = express();
 
 app.get('/health', async (req, res) => {
   try {
-    const time = await db.query('SELECT NOW( 1)');
+    const time = await db.query('SELECT NOW()');
     res.send(`Health check. Time: ${time.rows[0].now}`);
   } catch (e) {
     res.send(`Health check. Something is wrong. ${e}`);
