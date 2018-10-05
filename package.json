@@ -2,9 +2,8 @@
   "name": "fit-or-dead",
   "version": "1.0.0",
   "description": "The goal of the project is to give a bunch of functionalities for effective trainings in a gym. The user can find a lot of exercises and complex training programs. Also, users can add own exercises and make custom programs, share them, compare results with other users.",
-  "main": "app.js",
   "scripts": {
-    "test": "test"
+    "start": "webpack --config ./web-app/webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -28,13 +27,18 @@
     "eslint-plugin-import": "^2.14.0",
     "ts-loader": "^5.1.1",
     "typescript": "^3.0.3",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.0"
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.8",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "knex": "^0.15.2",
-    "pg": "^7.4.3"
+    "pg": "^7.4.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }
