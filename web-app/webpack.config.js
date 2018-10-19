@@ -1,12 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: './web-app/src/index.tsx',
   devtool: 'inline-source-map',
-  //TODO: Can't config dev-server "Module not found: Error: Can't resolve './src' in '/home/airmap/Projects/Fit-or-Dead'"
   devServer: {
-    publicPath: path.resolve(__dirname, 'web-app')
+    contentBase: './dist',
+    historyApiFallback: true,
+    inline: true
   },
   module: {
     rules: [
@@ -23,5 +25,9 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
+  plugins: [new HtmlWebpackPlugin({
+    template: path.join(__dirname, 'index.html'),
+    filename: path.join(__dirname, 'dist', 'index.html'),
+  })]
 };
