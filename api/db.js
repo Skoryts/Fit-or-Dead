@@ -5,7 +5,7 @@ class DB {
   constructor() {
     this.pool = new Pool({
       connectionString: config.db_uri,
-      ssl: true
+      ssl: true,
     });
   }
 
