@@ -1,6 +1,0 @@
-export const actionTypes = {
-  FETCH_END: 'FETCH_END',
-  FETCH_START: 'FETCH_START',
-  HEALTH_CHECK: 'HEALTH_CHECK',
-  IS_FETCHING: 'IS_FETCHING',
-};
